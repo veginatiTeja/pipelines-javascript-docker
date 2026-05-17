@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: veginatitejapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: veginatitejapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: veginatitejapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: veginatitejapipelinesjavascriptdocker 
+          image: tejaacr2026.azurecr.io/veginatitejapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
